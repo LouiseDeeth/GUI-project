@@ -3,6 +3,7 @@
 Due Date: Monday May 8
 
 The website must include the following:
+
 •	At least 3 web pages which include links for navigating between the pages.
 
 •	Some appropriate images.
