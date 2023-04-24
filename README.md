@@ -34,4 +34,6 @@ TO DO:
  - comment purposes of code
  - comment credit to each member - who did what 
  - add alert + "Thank you for shopping with us" once checked out - [issue] :(
+ - fix form validation on login page
+ - maybe change colour of link text on login + create account pages - "sign up here" and "log in here" difficult to see with background colour
  
