@@ -24,4 +24,14 @@ The website must include the following:
 
 •	Code must be clearly commented. As you are working in groups, it must be clear from the code who wrote what. Comments should include name of person who wrote a piece of code and brief description of what that code does. Failure to include comments will result in all group members getting reduced marks.
 
-•	Any code copied from another source must be acknowledged. Include a url to the source and description of what the code does. Failure to do so will result in a breach of the Student Code of Conduct relating to plagiarism to which you are bound to.
+•	Any code copied from another source must be acknowledged. Include a url to the source and description of what the code does. Failure to do so will result in a breach of the Student Code of Conduct relating to plagiarism to which you are bound 
+
+
+TO DO: 
+ - validate log in details
+ - 'about us' page
+ - reference image sources
+ - comment purposes of code
+ - comment credit to each member - who did what 
+ - add alert + "Thank you for shopping with us" once checked out - [issue] :(
+ 
