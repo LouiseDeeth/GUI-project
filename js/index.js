@@ -21,8 +21,7 @@ function Submitted()
 		localStorage.Email = Email;
 		localStorage.Password = Pass;
 				
-		
-		alert(Surname);
+	
 	}//if form is validated
 }
 //----------------------------------- login -----------------------------------
