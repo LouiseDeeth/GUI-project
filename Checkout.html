@@ -29,7 +29,7 @@
   <!-- Checkout Form used from Bootstrap Examples 
   https://getbootstrap.com/docs/4.0/examples/checkout/
   -->
-	<div class="container">
+	<div class="container mb-4">
     <br><br>
     <div class="row">
         <div class="col-md-4 order-md-2 mb-4">
@@ -40,31 +40,81 @@
             <ul class="list-group mb-3 sticky-top">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <h6 class="my-0">Product name</h6>
-                        <small class="text-muted">Description</small>
+                        <h6 class="my-0">Ibanez RG550-RF</h6>
+                        <small class="text-muted">Guitar</small>
+						
                     </div>
-                    <span class="text-muted">€ Amount</span>
+                    <span class="text-muted" id="item1Amt">€ Amount</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                   <div class="text-success">
-                        <h6 class="my-0">Promo code</h6>
-                        <small>TrebleClef</small>
+				<li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Ibanez RG5120M-PRT Prestige</h6>
+                        <small class="text-muted">Guitar</small>
                     </div>
-                    <span class="text-success">-€promoamount</span>
+                    <span class="text-muted" id="item2Amt">€ Amount</span>
                 </li>
+				<li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Ibanez AZ2204-ICM</h6>
+                        <small class="text-muted">Guitar</small>
+                    </div>
+                    <span class="text-muted" id="item3Amt">€ Amount</span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Yamaha PSR-E373</h6>
+                        <small class="text-muted">Keyboard</small>
+                    </div>
+                    <span class="text-muted" id="item4Amt">€ Amount</span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Yamaha YDP-145 B Arius</h6>
+                        <small class="text-muted">Piano</small>
+                    </div>
+                    <span class="text-muted" id="item5Amt">€ Amount</span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Yamaha PSR-SX700 Bundle</h6>
+                        <small class="text-muted">Keyboard Set</small>
+                    </div>
+                    <span class="text-muted" id="item6Amt">€ Amount</span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Mapex Tornado Zildjian</h6>
+                        <small class="text-muted">Drum kit</small>
+                    </div>
+                    <span class="text-muted" id="item7Amt">€ Amount</span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Millenium MPS-850 E-Drum Set</h6>
+                        <small class="text-muted">E-Drum kit</small>
+                    </div>
+                    <span class="text-muted" id="item8Amt">€ Amount</span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Ludwig Classic Maple 5pcs</h6>
+                        <small class="text-muted">Drum kit</small>
+                    </div>
+                    <span class="text-muted" id="item9Amt">€ Amount</span>
+                </li>
+                
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Total (EUR)</span>
-                    <strong>Total: </strong>
+                    <strong id="totalCost">Total: </strong>
                 </li>
+				<li class="list-group-item d-flex justify-content-between">
+                    <button class="btn btn-primary btn-block" type="submit" onclick="emptyCart()">Empty Cart</button>
+				</li>
+				<li class="list-group-item d-flex justify-content-between">
+                    <button class="btn btn-primary btn-block" type="submit" onclick="deleteAccount()">Delete Account</button>
+				</li>
             </ul>
-            <form class="card p-2">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Promo code">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-secondary">Redeem</button>
-                    </div>
-                </div>
-            </form>
+             
         </div>
         <div class="col-md-8 order-md-1">
             <h4 class="mb-3">Order Details</h4>
@@ -81,20 +131,11 @@
                         <div class="invalid-feedback"> Valid Name required. </div>
                     </div>
                 </div>
+
                 <div class="mb-3">
-                    <label for="username">Username</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">@</span>
-                        </div>
-                        <input type="text" class="form-control" id="username" required="">
-                        <div class="invalid-feedback" style="width: 100%;"> Username required. </div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                    <label for="email">Email</label>
                     <input type="email" class="form-control" id="email">
-                    <div class="invalid-feedback"> Please enter a valid email address. </div>
+                    <div class="invalid-feedback"> Must include @. Please enter valid Email Address </div>
                 </div>
                 <div class="mb-3">
                     <label for="address">Address</label>
@@ -124,7 +165,7 @@
 						<br><br>
                     </div>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Checkout</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="checkOut()">Checkout</button>
             </form>
         </div>
     </div>
@@ -133,17 +174,18 @@
 
 		
 		<!-- footer -->
-	  <footer>
+	 <!--  <footer>
 		  <div align="center">
 		    <p><strong>Galway Instrument Store</strong><br>
 		      Phone: 091 123 456<br>
 		    <a href="mailto:GalwayInstruments@gmail.ie">Email: GalwayInstruments@gmail.com</a><br>
 		    <a href="https://galwayinstruments.ie/">www.galwayinstruments.ie</a></p>
 		  </div>
-	  </footer>
+	  </footer>-->
 	  <br><br><br>
 <script>
 <!--  Form Validation -->
+let canSubmit = false;
 		(function () {
   'use strict'
 
@@ -157,14 +199,29 @@
         if (form.checkValidity() === false) {
           event.preventDefault()
           event.stopPropagation()
+		  canSubmit = false;
+        }
+		else if(form.checkValidity() === true) {
+          canSubmit = true;
         }
         form.classList.add('was-validated')
       }, false)
     })
   }, false)
 }())
-</script>
+//--------function not working - just refreshing page instantly instead of showing alert
+function checkOut()
+{
+	if(canSubmit == true)
+	{
+		alert("Order Recieved! Thank you for shopping with us.");
+		emptyCart();
+	}
+}
+	
 
+</script>
+	<script src="js/checkout.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
