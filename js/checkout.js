@@ -1,5 +1,6 @@
 //----------------------------------- checkout -----------------------------------
 
+//display cart 
 //item 1
 let item1CostChange = document.getElementById("item1Amt");
 let item1Cost = Number(localStorage.getItem("price1")) * Number(localStorage.getItem("item1Quantity"));
@@ -52,6 +53,119 @@ totalCost = Math.round(totalCost * 100) / 100; //round to 2 decimal places
 let totalCostChange = document.getElementById("totalCost");
 totalCostChange.innerHTML = "€ " + totalCost;
 
+//------ order details validation ------
+
+let nameWarning = "Valid name required";
+let emailWarning = "Must include @. Please enter valid Email Address";
+let addressWarning = "Please enter valid shipping address";
+let countryWarning = "Please input a valid country";
+let countyWarning = "Please provide a valid county";
+
+let canSubmit;
+let firstNameValid;
+let surnameValid;
+let emailValid;
+let addressValid;
+let countryValid;
+let countyValid;
+
+function checkOut()
+{
+	if(totalCost == 0)
+	{
+		alert("Cart empty - cannot proceed with Checkout");
+	}
+	else
+	{
+		//receive input from user
+		let firstNameInput = document.getElementById("firstNameIn").value;
+		let lastNameInput = document.getElementById("lastNameIn").value;
+		let emailInput = document.getElementById("emailIn").value;
+		let addressInput = document.getElementById("addressIn").value;
+		let countryInput = document.getElementById("countryIn").value;
+		let countyInput = document.getElementById("countyIn").value;
+		
+		//target warning divs to display invalid messages
+		let firstNameWarningCh = document.getElementById("firstNameChange");
+		let lastNameWarningCh = document.getElementById("surnameChange");
+		let emailWarningCh = document.getElementById("emailChange");
+		let addressWarningCh = document.getElementById("addressChange");
+		let countryWarningCh = document.getElementById("countryChange");
+		let countyWarningCh = document.getElementById("countyChange");
+		
+		if(firstNameInput == "")
+		{
+			firstNameWarningCh.innerHTML = nameWarning;
+		}//if firstName input is empty
+		else if(firstNameInput != "")
+		{
+			firstNameWarningCh.innerHTML = "";
+			firstNameValid = true;
+		}//if first name is valid
+		
+		if(lastNameInput == "")
+		{
+			lastNameWarningCh.innerHTML = nameWarning;
+		}//if last name is empty
+		else if(lastNameInput != "")
+		{
+			lastNameWarningCh.innerHTML = "";
+			surnameValid = true;
+		}//if last name is valid
+		
+		if(!(emailInput.includes("@")) || emailInput == "")
+		{
+			emailWarningCh.innerHTML = emailWarning;
+		}//if email doesnt include @ symbol or is left empty
+		else if(emailInput.includes("@") && emailInput != "")
+		{
+			emailWarningCh.innerHTML = "";
+			emailValid = true;
+		}//if valid email
+		
+		if(addressInput == "")
+		{
+			addressWarningCh.innerHTML = addressWarning;
+		}//if address invalid
+		else if(addressInput != "")
+		{
+			addressWarningCh.innerHTML = "";
+			addressValid = true;
+		}//if address valid
+		
+		if(countryInput == "")
+		{
+			countryWarningCh.innerHTML = countryWarning;
+		}//if country invalid
+		else if(countryInput != "")
+		{
+			countryWarningCh.innerHTML = "";
+			countryValid = true;
+		}//if country valid
+		
+		if(countyInput == "")
+		{
+			countyWarningCh.innerHTML = countyWarning;
+		}//if county invalid
+		else if(countyInput != "")
+		{
+			countyWarningCh.innerHTML = "";
+			countyValid = true;
+		}//if county valid
+
+		if(firstNameValid == true && surnameValid == true && emailValid == true && addressValid == true && countryValid == true && countyValid == true)
+		{
+			canSubmit = true;
+		}//if all fields are valid
+
+		
+		if(canSubmit == true)
+		{
+			alert("Order Recieved! Thank you for shopping with us.");
+			emptyCart();
+		}
+	}//if items in cart - can proceed with checkout
+}//function to validate input details and check out order
 
 function emptyCart()
 {
@@ -69,16 +183,7 @@ function emptyCart()
 	
 	alert("Your cart has been emptied");
 	
-	location.reload();
-}//empty cart
-
-function deleteAccount()
-{
-	//--- remove details from local storage ---
-	localStorage.removeItem("FirstName");
-	localStorage.removeItem("LastName");
-	localStorage.removeItem("Password");
-	localStorage.removeItem("Email");
+	location.reload();//reloads page to refresh cart
 	
-	alert("Your account has been deleted");
-}//deletes user's given info - name, email, password
+}//empties cart - removes previously stored quantities and sets them back to 0
+

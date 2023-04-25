@@ -5,34 +5,112 @@
 
 //----------------------------------- create account -----------------------------------
 
-function Submitted()
-{
-	if(form.checkValidity())
-	{
-		Name = document.getElementById("name").value;
-		Surname = document.getElementById("surname").value;
-		Email = document.getElementById("email").value;
-		Pass = document.getElementById("password").value;
-		
-		//add details to local storage
-		
-		localStorage.FirstName = Name;
-		localStorage.LastName = Surname;
-		localStorage.Email = Email;
-		localStorage.Password = Pass;
-				
-	
-	}//if form is validated
-}
-//----------------------------------- login -----------------------------------
-function Redirect1()
+function validateDetails()
 {	
-	if(form.checkValidity())
+	
+	//validity checker booleans
+	let validFirstName;
+	let validSurname;
+	let validEmail;
+	let validPassword;
+	
+	//warning messages stored in strings
+	let emptyField = "Field cannot be empty";
+	let emailInvalid = "Email must contain '@'";
+	let passwordInvalid = "Password must be at least 6 characters long";
+	
+	//warning fields to change
+	let firstNameWarning = document.getElementById("firstNameWarningField");
+	let surnameWarning = document.getElementById("SurnameWarningField");
+	let emailWarning = document.getElementById("emailWarningField");
+	let passwordWarning = document.getElementById("passwordWarningField");
+	
+	//input variables
+	let firstNameIn = document.getElementById("FirstName").value;
+	let surnameIn = document.getElementById("Surname").value;
+	let emailIn = document.getElementById("EmailInput").value;
+	let passwordIn = document.getElementById("PasswordInput").value;
+	
+	//save input to local storage
+	localStorage.FirstName = firstNameIn;
+	localStorage.LastName = surnameIn;
+	localStorage.Email = emailIn;
+	localStorage.Password = passwordIn;
+	
+	//------ invalid input options ------
+	if(firstNameIn == "")
 	{
-		let url = "Home.html";
-		location.assign(url);
-	}//if
-}//redirects to home page if input is valid
+		firstNameWarning.innerHTML = emptyField;
+	}//if first name field is empty
+	
+	if(surnameIn == "")
+	{
+		surnameWarning.innerHTML = emptyField;
+	}//if surname field is empty
+	
+	if(emailIn == "" || (!(emailIn.includes("@"))))
+	{
+		if(emailIn == "")
+		{
+			emailWarning.innerHTML = emptyField;
+		}//if email field is empty
+		else if(!(emailIn.includes("@")))
+		{
+			emailWarning.innerHTML = emailInvalid;
+		}//if email does not include '@'			
+	}//if email is empty or invalid
+	
+	if(passwordIn == "" || (passwordIn.length < 6))
+	{
+		if(passwordIn == "")
+		{
+			passwordWarning.innerHTML = emptyField;
+		}//if password field is empty
+		else if(passwordIn.length < 6)
+		{
+			passwordWarning.innerHTML = passwordInvalid;
+		}//if password is less than 6 characters
+	}//if password is empty or less than 6 characters
+	
+	//------ valid input options ------
+	if(firstNameIn != "")
+	{
+		firstNameWarning.innerHTML = "";
+		validFirstName = true;
+	}//if first name field is not empty - valid input
+	
+	if(surnameIn != "")
+	{
+		surnameWarning.innerHTML = "";
+		validSurname = true;
+	}//if surname field is not empty - valid input
+	
+	if(emailIn.includes("@"))
+	{
+		emailWarning.innerHTML = "";
+		validEmail = true;
+	}//if email does include '@' - valid input			
+	
+	if(passwordIn.length > 6)
+	{
+		passwordWarning.innerHTML = "";
+		validPassword = true;
+	}//if password is more than 6 characters - valid input
+	
+	if(validFirstName == true && validSurname == true && validEmail == true && validPassword == true)
+	{
+		alert("Account Created. \nPlease Login");
+		Redirect2();
+	}// if all fields are valid - redirect to login
+}//validate details function
+
+function Redirect2()
+{
+	let url = "Login.html";
+	location.assign(url);
+}//redirect to login
+
+
 
 
 //----------------------------------- home page -----------------------------------

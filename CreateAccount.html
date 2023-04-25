@@ -33,41 +33,41 @@
 	<form novalidate>
 		<div class="form-group">
 			<label class="form-label" for="name">Name</label>
-			<input class="form-control" type="name" id="name" required>
-			<div class="invalid-feedback">
-				Enter your first name
+			<input class="form-control" type="name" id="FirstName" required>
+			<div class="text-danger" id="firstNameWarningField">
+				
 			</div>
 		</div>
 		
 		<div class="form-group">
 			<label class="form-label" for="surname">Surname</label>
-			<input class="form-control" type="surname" id="surname" required>
-			<div class="invalid-feedback">
-				Enter your surname
+			<input class="form-control" type="surname" id="Surname" required>
+			<div class="text-danger" id="SurnameWarningField">
+				
 			</div>
 		</div>
 		
 		<div class="form-group">
 			<label class="form-label" for="email">Email</label>
-			<input class="form-control" type="email" id="email" required>
-			<div class="invalid-feedback">
-				Email must contain '@'
+			<input class="form-control" type="email" id="EmailInput" required>
+			<div class="text-danger" id="emailWarningField">
+				
 			</div>
 		</div>
 		
 		<div class="form-group">
 			<label class="form-label" for="password">Password</label>
-			<input class="form-control" type="password" id="password" required>
-			<div class="invalid-feedback">
-				Enter a valid password
+			<input class="form-control" type="password" id="PasswordInput" required>
+			<div class="text-danger" id="passwordWarningField">
+				
 			</div>
 		</div>
 		
 		<div>
-			Already have an account? <br><a href="Login.html" class="link " id="link">Login here</a>
+			Already have an account? <br><a href="Login.html" class="link" id="linkColor">Login here</a>
 		</div>
 		
-		<input class="btn w-100" id="btn" type="submit" value="SIGN UP" onclick="Submitted()">
+		<div class="btn w-100 mt-2 btn-primary" id="btnSignUp" type="button" onclick="validateDetails()">SIGN UP</div>
 	</form>
 </div>
    	<br><br><br>
