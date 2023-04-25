@@ -29,7 +29,6 @@ The website must include the following:
 
 TO DO: 
  - 'about us' page
- - reference image sources
  - comment purposes of code
  - comment credit to each member - who did what 
  
