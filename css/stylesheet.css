@@ -6,7 +6,6 @@
 
 body {
 	background-color:  #B3CEE5;
-	
 }
 
 .login {
@@ -46,10 +45,18 @@ body {
 	font-size: 30px;
 }
 
-.cardImgHeight {
+/*.cardImgHeight {
 	height: 350px;
-}
+}*/ 
 
 #linkColor {
 	color: #3560a6;
+}
+
+.logo{
+	border-style: ridge;
+	border-width: 5px;
+	border-color: DodgerBlue;
+	box-shadow: 5px 5px 5px #777777;	
+	border-radius: 10px;
 }
