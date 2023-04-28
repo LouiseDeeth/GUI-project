@@ -1,4 +1,5 @@
 ------------------- GUI Group Project -------------------
+
 By Rebecca Nolan, Louise Deeth, and Sarah O'Connor
 
 Our project is a shop website for "Galway Instrument Store".
