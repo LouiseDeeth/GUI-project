@@ -1,3 +1,4 @@
+// login.js by Sarah O'Connor
 //----------------------------------- login -----------------------------------
 
 //strings to display if invalid fields
