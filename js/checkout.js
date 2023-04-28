@@ -1,3 +1,4 @@
+//checkout.js by Sarah O'Connor
 //----------------------------------- checkout -----------------------------------
 
 //display cart 
