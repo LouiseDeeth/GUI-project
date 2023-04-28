@@ -27,8 +27,24 @@ The website must include the following:
 •	Any code copied from another source must be acknowledged. Include a url to the source and description of what the code does. Failure to do so will result in a breach of the Student Code of Conduct relating to plagiarism to which you are bound 
 
 
-TO DO: 
- - 'about us' page
- - comment purposes of code
- - comment credit to each member - who did what 
+-------------------- Sarah --------------------
+
+login.html
+login.js
+checkout.js
+testing
+
+-------------------- Louise --------------------
+
+checkout.html
+aboutus.html
+aboutus.js
+stylesheet.css
+
+-------------------- Rebecca --------------------
+
+home.html
+createaccount.html
+index.js
+images
  
