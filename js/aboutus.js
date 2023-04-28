@@ -55,10 +55,3 @@ if (isOpen)
 		case 6: listItems[5].style.color = "red"; break;
 	}
 }
-
-var myCarousel = document.getElementById('myCarousel')
-
-myCarousel.addEventListener('slide.bs.carousel', function () 
-{
-  // do something...
-})
