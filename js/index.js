@@ -1,7 +1,7 @@
 //JS file for GUI Group project by Rebecca Nolan, Louise Deeth, and Sarah O'Connor
 //2023
 
-//sarah
+//index.js by Rebecca Nolan
 
 //----------------------------------- create account -----------------------------------
 
