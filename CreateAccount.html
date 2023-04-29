@@ -26,6 +26,7 @@
 	
   </head>
   <body>
+	<hr class="border border-primary border-3 opacity-75">  
   <br><br>
   
   	<!-- 
@@ -41,54 +42,45 @@
 		<div class="form-group">
 			<label class="form-label" for="name">Name</label>
 			<input class="form-control" type="name" id="FirstName" required>
-			<div class="text-danger" id="firstNameWarningField">
-				
-			</div>
+			<div class="text-danger" id="firstNameWarningField"></div>
 		</div>
 		
 		<div class="form-group">
 			<label class="form-label" for="surname">Surname</label>
 			<input class="form-control" type="surname" id="Surname" required>
-			<div class="text-danger" id="SurnameWarningField">
-				
-			</div>
+			<div class="text-danger" id="SurnameWarningField"></div>
 		</div>
 		
 		<div class="form-group">
 			<label class="form-label" for="email">Email</label>
 			<input class="form-control" type="email" id="EmailInput" required>
-			<div class="text-danger" id="emailWarningField">
-				
-			</div>
+			<div class="text-danger" id="emailWarningField"></div>
 		</div>
 		
 		<div class="form-group">
 			<label class="form-label" for="password">Password</label>
 			<input class="form-control" type="password" id="PasswordInput" required>
-			<div class="text-danger" id="passwordWarningField">
-				
-			</div>
-		</div>
-		
-		<div>
-			Already have an account? <br><a href="Login.html" class="link" id="linkColor">Login here</a>
+			<div class="text-danger" id="passwordWarningField"></div>
 		</div>
 		
 		<div class="btn w-100 mt-2 btn-primary" id="btnSignUp" type="button" onclick="validateDetails()">SIGN UP</div>
+
+		<div>
+			Already have an account? <br><a href="Login.html" class="link" id="linkColor">Login here</a>
+		</div>		
 	</form>
 </div>
-   	<br><br><br>
+
+	<hr class="border border-primary border-3 opacity-75 m-5">
 		
-		<!-- footer -->
+	<!-- footer -->
 	  <footer>
 		  <div align="center">
-		    <p><strong>Galway Instrument Store</strong><br>
-		      Phone: 091 123 456<br>
-		    <a href="mailto:GalwayInstruments@gmail.ie">Email: GalwayInstruments@gmail.com</a><br>
+		    <p><strong>Galway Instrument Store</strong><br>Phone: 091 123 456<br>
+		    Email: <a href="mailto:GalwayInstruments@gmail.ie">GalwayInstruments@gmail.com</a><br>
 		    <a href="https://galwayinstruments.ie/">www.galwayinstruments.ie</a></p>
 		  </div>
 	  </footer>
-	  <br><br><br>
 	  
 	<script>
 	const form = document.querySelector("form");
@@ -103,8 +95,6 @@
 	})
 	</script>
 	<script src="js/index.js"></script>
-	
-
     
 	 <!-- JavaScript links from BootStrap -->
 	  
