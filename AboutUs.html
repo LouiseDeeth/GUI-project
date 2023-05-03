@@ -1,5 +1,6 @@
-<!-- Home.html by Rebecca Nolan -->
-<!DOCTYPE html>
+<!-- AboutUs.html page by Louise Deeth -->
+
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -9,195 +10,82 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/stylesheet.css">
-	
+    	
 	<!-- Page Title-->
     <title>Galway Instrument Store</title>
-	
-	<!-- Banner created using publisher with stock image from https://stock.adobe.com/ie/search?k=electric+guitar+outline -->		
-	<a href="Home.html"><img id="top" class="logo" width="100%" src="images/Logo.jpg" alt="Logo"></a>		  
-	
+	  
+	<!-- Banner created using publisher with stock image from https://stock.adobe.com/ie/search?k=electric+guitar+outline -->	
+        <a href="Home.html"><img class="logo" width="100%" src="images/Logo.jpg" alt="Logo"></a>
+	  
 	<!-- Nav created using Bootstrap for responsive design
 	https://getbootstrap.com/docs/4.0/components/navs/#working-with-flex-utilities
 	-->
 	<nav class="nav nav-pills flex-column flex-sm-row">
-	  <a class="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
+	  <a class="flex-sm-fill text-sm-center nav-link " href="Home.html">Home</a>
 	  <a class="flex-sm-fill text-sm-center nav-link" href="Login.html">Login</a>
 	  <a class="flex-sm-fill text-sm-center nav-link" href="Checkout.html">Checkout</a>
-	  <a class="flex-sm-fill text-sm-center nav-link" href="AboutUs.html">About us</a>
+	  <a class="flex-sm-fill text-sm-center nav-link active" href="AboutUs.html">About us</a>
 	</nav>
-	</head>
-
 	
+  </head>
+  
   <body>
 	<hr class="border border-primary border-3 opacity-75">
-	  <!-- Card Group used from Bootstrap
+<!-- Card Group used from Bootstrap
 	  https://getbootstrap.com/docs/4.0/components/card/#card-groups 
 	  with custom button added
 	  -->
-    <div>
-	  <div class="h2 mx-2 ml-4">Guitars</div>
-	  <div class="card-group p-4 row">
-	  <div class="col-lg-4 col-md-12 col-sm-12">
-	  <div class="card">
-		<img class="card-img-top cardImgHeight" src="images/GT6.png" alt="Image of Ibanez RG550-RF">
-		  <!-- IMGAGE SRC: https://www.thomann.de/ie/ibanez_rg550_rf.htm -->
-		<div class="card-body">
-		  <h5 class="card-title" id="title1">Ibanez RG550-RF</h5>
-		  <p class="card-text">Genesis Collection<br>Made in Japan<br>Body: Basswood<br>Fretboard: Maple</p>
+  <div class="container padding:0px 100px"> 
+  <div class="h2 mt-4 ml-4">About Us</div>
+    <div class="card-group p-4 row">
+	<div class="col-lg-7 col-md-12 col-sm-12">
+    <div class="card gx-2 m-2">
+      <div class="card-body">
+		<!-- IMAGE SOURCE: https://www.nicepng.com/ourpic/u2q8a9i1y3w7q8e6_music-notes-png-musical-note-transparent-background/ -->	  
+        <h6><img src="images/MusicNote.png" alt="Music note" width="70px" align="left" hspace="15" vspace="7">At Galway Instruments Store, we are passionate about helping musicians find the perfect instruments for their needs. Our Store was first established in 2003 by brothers John and Tony King. The brothers grew up surrounded by music in the house, with their grandfather Paddy King being a well known musician in Galway and their mother being a bandmember of local band Swirl.</h6> 
+        <h6>After finishing school, John headed to America where he worked with skilled instrument makers, Tallys. Here he gained a wide knowledge about instruments and gained valuable experience. After 10 years there, he decided to return home to Galway and set up Galway Instruments store along with his brother Tony.</h6><br>
+		<h6>Our mission is to provide high-quality instruments at the best prices, while also offering exceptional customer service. We believe that everyone should have access to great musical equipment, regardless of their skill level or budget.</h6> 
+		<h6>Whether you're a beginner or a seasoned professional, we have something for everyone. From guitars and drums to keyboards and amplifiers, we carry a wide variety of instruments to suit your needs. Our team is knowledgeable and passionate about music, and we are always happy to offer advice and guidance to our customers.</h6>
+		<h6>Our website is updated as frequently as possible but it you don’t see what you’re looking for, just get in touch!</h6> 
 		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€899.99</div>
-		  <div class="btn btn-primary" onclick="guitar1()">Add to Cart</div>
-		</div>
-	  </div>
-	  </div>
-	  <div class="col-lg-4 col-md-12 col-sm-12">
-	  <div class="card">
-		<img class="card-img-top cardImgHeight" src="images/GT4.png" alt="Image of Ibanez RG5120M-PRT">
-		  <!-- IMAGE SRC: https://www.thomann.de/ie/ibanez_rg5120m_prt_prestige.htm-->
-		<div class="card-body">
-		  <h5 class="card-title">Ibanez RG5120M-PRT Prestige</h5>	 
-		  <p class="card-text">Prestige Collection<br>Made in Japan<br>Body: Mahogany<br>Fretboard: Maple</p>
-		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€1899.99</div>
-		  <div class="btn btn-primary" onclick="guitar2()">Add to Cart</div>
-		</div>
-	  </div>
-	  </div>
-	  <div class="col-lg-4 col-md-12 col-sm-12">
-	  <div class="card">
-		<img class="card-img-top cardImgHeight" src="images/GT5.png" alt="Image of Ibanez AZ2204-ICM">
-		  <!-- IMGAGE SRC: https://www.thomann.de/ie/ibanez_az2204_icm.htm -->
-		<div class="card-body">
-		  <h5 class="card-title">Ibanez AZ2204-ICM</h5>
-		  <p class="card-text">Body: Mahogany<br>Fretboard: Maple<br>24 Jumbo Fret<br>Chrome Hardware</p>
-		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€1939.99</div>
-		  <div class="btn btn-primary" onclick="guitar3()">Add to Cart</div>
-		</div>
-	  </div>
-	  </div>
-	  </div>
-	 <!-- Card Group used from Bootstrap
-	  https://getbootstrap.com/docs/4.0/components/card/#card-groups 
-	  with custom button added
-	  -->
-	  <div class="h2 mx-2 ml-4">Keys</div>
-	  <div class="card-group p-4 row">
-      <div class="col-lg-4 col-md-12 col-sm-12">
-	  <div class="card">
-	  <!--IMAGE SOURCE: https://www.thomann.de/ie/yamaha_psr_e373.htm -->
-		<img class="card-img-top cardImgHeight" src="images/keyboardE373.jpg" alt="Image of keyboard - Yahama PSR-E373">
-		<div class="card-body">
-		  <h5 class="card-title">Yamaha PSR-E373</h5>
-		  <p class="card-text">Successor to the PSR-E363<br>61 Standard Keys<br>Dimensions: 945 x 369 x 118 mm</p>
-		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€249.99</div>
-		  <div class="btn btn-primary" onclick="keys1()">Add to Cart</div>
-		</div>
-	  </div>
-	  </div>    
-	  <div class="col-lg-4 col-md-12 col-sm-12">
-	  <div class="card">
-		<img class="card-img-top cardImgHeight" src="images/piano.jpg" alt="Image of piano - Yamaha YDP-145 B Arius">
-		<div class="card-body">
-		<!--IMAGE SOURCE: https://kytary.ie/yamaha-ydp-145-b/HN240795/ -->
-			<h5 class="card-title">Yamaha YDP-145 B Arius</h5> 
-			<p class="card-text">88 Weighted Keys<br>Matt Finish<br>Dimensions: 1357 x 815 x 422</p>
-		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€999.99</div>
-		  <div class="btn btn-primary" onclick="keys2()">Add to Cart</div>
-		</div>
-	  </div>
-	  </div>
-	    <div class="col-lg-4 col-md-12 col-sm-12">
-		<div class="card">
-		<img class="card-img-top cardImgHeight" src="images/keyboardSX700.jpg" alt="Image of Yamaha PSR-SX700 Deluxe Bundle">
-		<div class="card-body">
-		<!--IMAGE SOURCE: https://www.thomann.de/ie/yamaha_psr_sx700_deluxe_bundle.htm -->
-		  <h5 class="card-title">Yamaha PSR-SX700 Deluxe Bundle</h5>
-		  <p class="card-text">Yamaha PSR-SX700<br>Keyboard Bag<br>Keyboard Bench<br>Headphones</p>
-		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€1274.99</div>
-		  <div class="btn btn-primary" onclick="keys3()">Add to Cart</div>
-		</div>
-		</div>
-		</div>
-		</div>
-	 <!-- Card Group used from Bootstrap
-	  https://getbootstrap.com/docs/4.0/components/card/#card-groups 
-	  with custom button added
-	  -->
-	  <div class="h2 mx-2 ml-4">Drums</div>
-	  <div class="card-group p-4 row">
-	    <div class="col-lg-4 col-md-12 col-sm-12">
-		<div class="card">
-		<img class="card-img-top cardImgHeight" src="images/mapexTornado.jpg" alt="Image of red drum kit">
-		<div class="card-body">
-		<!--IMAGE SOURCE: https://www.thomann.de/ie/mapex_tornado_jazz_zildjian_set_dr.htm -->
-		  <h5 class="card-title">Mapex Tornado Stand. Zildjian Set</h5>
-		  <p class="card-text">Tornado Series<br>Standard Model<br>Basswood Drum Shell with Wrap Finish<br>Colour: Red</p>
-		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€599.00</div>
-		  <div class="btn btn-primary" onclick="drums1()">Add to Cart</div>
-		</div>
-	  </div>
-	  </div>
-	  <div class="col-lg-4 col-md-12 col-sm-12">
-	  <div class="card">
-		<img class="card-img-top cardImgHeight" src="images/electronicDrums.jpg" alt="Image of E-Drums">
-		<div class="card-body">
-		<!--IMAGE SOURCE: https://www.thomann.de/ie/millenium_mps_850_e_drum_set.htm -->
-		  <h5 class="card-title">Millenium MPS-850 E-Drum Set</h5>	 
-		  <p class="card-text">Electronic Drum Kit<br>Standard Model<br>550 Voices, 30 Preset Kits, 100 Songs<br>Colour: Black</p>
-		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€634.99</div>
-		  <div class="btn btn-primary" onclick="drums2()">Add to Cart</div>
-		</div>
-	  </div>
-	  </div>
-	  <div class="col-lg-4 col-md-12 col-sm-12">
-	  <div class="card">
-		<img class="card-img-top cardImgHeight" src="images/ludwigClassic.jpg" alt="Image of Ludwig Classic Maple drum set - colour Black">
-		<div class="card-body">
-		<!--IMAGE SOURCE: https://www.thomann.de/ie/ludwig_classic_maple_5pcs_v._black_oy.htm -->
-		  <h5 class="card-title">Ludwig Classic Maple 5pcs Drum Set</h5>
-		  <p class="card-text">Classic Maple Series<br>Exclusive to Galway Instrument Store<br>7-Ply Maple shells<br>Colour: Vintage Black</p>
-		</div>
-		<div class="card-footer text-center">
-		  <div id="price">€4299.99</div>
-		  <div class="btn btn-primary" onclick="drums3()">Add to Cart</div>
-		</div>
-	  </div>
-	  </div>
-	  </div>
-		  
-    <p class="top pl-5"><a href="#top">Back to Top</a></p> 
-		  
-	</div>	  
+      </div>
+    </div>
+			
+	<div class="col-lg-5 col-md-12 col-sm-12">
+    <div class="card gx-2 m-2">
+      <div class="card-body">
+	    <h5 class="card-title" align="center">Contact us</h5>
+				 
+          <p><strong>Galway Instrument Store</strong><br> Dublin Road<br>Galway City<br><br><strong> Phone:</strong> 091 123 456<br><strong>Email:</strong> 
+		  <a href="mailto:GalwayInstruments@gmail.ie">GalwayInstruments@gmail.com</a><br><strong>Website:</strong> 
+		  <a href="Home.html">www.galwayinstruments.ie</a></p>
+					
+          <br>
+      <div>
+        <h5 >OPENING HOURS</h5>
+        <ul>
+		  <li>Monday: 9am - 5pm</li>
+		  <li>Tuesday: 9am - 5pm</li>
+		  <li>Wednesday: 9am - 5pm</li>
+		  <li>Thursday: 9am - 8pm</li>
+		  <li>Friday: 9am - 6pm</li>
+		  <li>Saturday: 10am - 4pm</li>
+		  <li>Sunday: Closed</li>
+		  <br>
+		  <!-- Shows if store is open or not-->
+		  <p id="hours"></p>
+        </ul>   
+      </div>
+      </div>
+    </div>
+	</div>
+    <br><br><br><br>
+    </div>
+  </div> 	
 	
 	<hr class="border border-primary border-3 opacity-75 m-5">
 	
-	<!-- footer -->
-	
-	  <footer>
-		  <div align="center">
-		    <p><strong>Galway Instrument Store</strong><br>
-			Phone: 091 123 456<br>
-			Email: <a href="mailto:GalwayInstruments@gmail.ie">GalwayInstruments@gmail.com</a><br>
-			<a href="Home.html">www.galwayinstruments.ie</a></p>
-		  </div>
-	  </footer>
-	  
-	  <script src="js/index.js"></script>
-	  
+	<script src="js/aboutus.js"></script>	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
