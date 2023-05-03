@@ -42,7 +42,7 @@ else
 }
 
 // Set the color of the relevant <li> tag to red if the store is open
-const listItems = document.querySelectorAll("#hours ul li");
+const listItems = document.querySelectorAll("li");
 if (isOpen) 
 {
 	switch (dayOfWeek) 
