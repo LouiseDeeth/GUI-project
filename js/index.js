@@ -14,6 +14,9 @@ function validateDetails()
 	let validEmail;
 	let validPassword;
 	
+	let existingAccount;
+	let validDetails;
+	
 	//warning messages stored in strings
 	let emptyField = "Field cannot be empty";
 	let emailInvalid = "Email must contain '@'";
@@ -31,77 +34,90 @@ function validateDetails()
 	let emailIn = document.getElementById("EmailInput").value;
 	let passwordIn = document.getElementById("PasswordInput").value;
 	
-	//save input to local storage
-	localStorage.FirstName = firstNameIn;
-	localStorage.LastName = surnameIn;
-	localStorage.Email = emailIn;
-	localStorage.Password = passwordIn;
-	
-	//------ invalid input options ------
-	if(firstNameIn == "")
+	if(localStorage.FirstName != "")
 	{
-		firstNameWarning.innerHTML = emptyField;
-	}//if first name field is empty
-	
-	if(surnameIn == "")
+		alert("An account already exists.\nPlease Log In, or Delete Existing Account before signing up");
+	}
+	else
 	{
-		surnameWarning.innerHTML = emptyField;
-	}//if surname field is empty
-	
-	if(emailIn == "" || (!(emailIn.includes("@"))))
-	{
-		if(emailIn == "")
+		//save input to local storage
+		localStorage.FirstName = firstNameIn;
+		localStorage.LastName = surnameIn;
+		localStorage.Email = emailIn;
+		localStorage.Password = passwordIn;
+		
+		//------ invalid input options ------
+		if(firstNameIn == "")
 		{
-			emailWarning.innerHTML = emptyField;
-		}//if email field is empty
-		else if(!(emailIn.includes("@")))
+			firstNameWarning.innerHTML = emptyField;
+		}//if first name field is empty
+		
+		if(surnameIn == "")
 		{
-			emailWarning.innerHTML = emailInvalid;
-		}//if email does not include '@'			
-	}//if email is empty or invalid
-	
-	if(passwordIn == "" || (passwordIn.length < 6))
-	{
-		if(passwordIn == "")
+			surnameWarning.innerHTML = emptyField;
+		}//if surname field is empty
+		
+		if(emailIn == "" || (!(emailIn.includes("@"))))
 		{
-			passwordWarning.innerHTML = emptyField;
-		}//if password field is empty
-		else if(passwordIn.length < 6)
+			if(emailIn == "")
+			{
+				emailWarning.innerHTML = emptyField;
+			}//if email field is empty
+			else if(!(emailIn.includes("@")))
+			{
+				emailWarning.innerHTML = emailInvalid;
+			}//if email does not include '@'			
+		}//if email is empty or invalid
+		
+		if(passwordIn == "" || (passwordIn.length < 6))
 		{
-			passwordWarning.innerHTML = passwordInvalid;
-		}//if password is less than 6 characters
-	}//if password is empty or less than 6 characters
-	
-	//------ valid input options ------
-	if(firstNameIn != "")
-	{
-		firstNameWarning.innerHTML = "";
-		validFirstName = true;
-	}//if first name field is not empty - valid input
-	
-	if(surnameIn != "")
-	{
-		surnameWarning.innerHTML = "";
-		validSurname = true;
-	}//if surname field is not empty - valid input
-	
-	if(emailIn.includes("@"))
-	{
-		emailWarning.innerHTML = "";
-		validEmail = true;
-	}//if email does include '@' - valid input			
-	
-	if(passwordIn.length > 6)
-	{
-		passwordWarning.innerHTML = "";
-		validPassword = true;
-	}//if password is more than 6 characters - valid input
-	
-	if(validFirstName == true && validSurname == true && validEmail == true && validPassword == true)
-	{
-		alert("Account Created. \nPlease Login");
-		Redirect2();
-	}// if all fields are valid - redirect to login
+			if(passwordIn == "")
+			{
+				passwordWarning.innerHTML = emptyField;
+			}//if password field is empty
+			else if(passwordIn.length < 6)
+			{
+				passwordWarning.innerHTML = passwordInvalid;
+			}//if password is less than 6 characters
+		}//if password is empty or less than 6 characters
+		
+		//------ valid input options ------
+		if(firstNameIn != "")
+		{
+			firstNameWarning.innerHTML = "";
+			validFirstName = true;
+		}//if first name field is not empty - valid input
+		
+		if(surnameIn != "")
+		{
+			surnameWarning.innerHTML = "";
+			validSurname = true;
+		}//if surname field is not empty - valid input
+		
+		if(emailIn.includes("@"))
+		{
+			emailWarning.innerHTML = "";
+			validEmail = true;
+		}//if email does include '@' - valid input			
+		
+		if(passwordIn.length > 6)
+		{
+			passwordWarning.innerHTML = "";
+			validPassword = true;
+		}//if password is more than 6 characters - valid input
+		
+		if(validFirstName == true && validSurname == true && validEmail == true && validPassword == true)
+		{
+			validDetails = true;
+		}// if all fields are valid 
+		
+		if(validDetails == true)
+		{
+			
+			alert("Account Created. \nPlease Login");
+			Redirect2();
+		}//if valid details - redirect to login page
+	}//else
 }//validate details function
 
 function Redirect2()
