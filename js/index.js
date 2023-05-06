@@ -34,17 +34,13 @@ function validateDetails()
 	let emailIn = document.getElementById("EmailInput").value;
 	let passwordIn = document.getElementById("PasswordInput").value;
 	
-	if(localStorage.FirstName != "")
+	if(localStorage.FirstName != "" && localStorage.LastName != "" && localStorage.Email != "" && localStorage.Password != "")
 	{
 		alert("An account already exists.\nPlease Log In, or Delete Existing Account before signing up");
-	}
+		Redirect2();
+	}//if account already exists 
 	else
 	{
-		//save input to local storage
-		localStorage.FirstName = firstNameIn;
-		localStorage.LastName = surnameIn;
-		localStorage.Email = emailIn;
-		localStorage.Password = passwordIn;
 		
 		//------ invalid input options ------
 		if(firstNameIn == "")
@@ -69,13 +65,13 @@ function validateDetails()
 			}//if email does not include '@'			
 		}//if email is empty or invalid
 		
-		if(passwordIn == "" || (passwordIn.length < 6))
+		if(passwordIn == "" || (passwordIn.length <= 5))
 		{
 			if(passwordIn == "")
 			{
 				passwordWarning.innerHTML = emptyField;
 			}//if password field is empty
-			else if(passwordIn.length < 6)
+			else if(passwordIn.length <= 5)
 			{
 				passwordWarning.innerHTML = passwordInvalid;
 			}//if password is less than 6 characters
@@ -100,7 +96,7 @@ function validateDetails()
 			validEmail = true;
 		}//if email does include '@' - valid input			
 		
-		if(passwordIn.length > 6)
+		if(passwordIn.length >= 6)
 		{
 			passwordWarning.innerHTML = "";
 			validPassword = true;
@@ -113,7 +109,11 @@ function validateDetails()
 		
 		if(validDetails == true)
 		{
-			
+			//save input to local storage
+			localStorage.FirstName = firstNameIn;
+			localStorage.LastName = surnameIn;
+			localStorage.Email = emailIn;
+			localStorage.Password = passwordIn;
 			alert("Account Created. \nPlease Login");
 			Redirect2();
 		}//if valid details - redirect to login page
